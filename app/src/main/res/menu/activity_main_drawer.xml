@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group>
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Beranda" />
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Cek Data" />
+    </group>
+
+    <item android:title="Akun">
+        <menu>
+            <!--item
+                android:id="@+id/nav_facebook"
+                android:icon="@drawable/ic_facebook"
+                android:title="Login dgn Facebook" /-->
+            <item
+                android:id="@+id/nav_google"
+                android:icon="@drawable/ic_google_plus"
+                android:title="Login dgn Google" />
+        </menu>
+    </item>
+
+    <item android:title="Data">
+        <menu>
+            <item
+                android:id="@+id/nav_download"
+                android:icon="@drawable/ic_cloud_download"
+                android:title="Unduh Data Awal" />
+            <item
+                android:id="@+id/nav_download_for_correction"
+                android:icon="@drawable/ic_cloud_download"
+                android:title="Unduh Data utk Perbaikan" />
+            <item
+                android:id="@+id/nav_upload"
+                android:icon="@drawable/ic_file_upload"
+                android:title="Kirim" />
+            <item
+                android:id="@+id/nav_upload_data"
+                android:icon="@drawable/ic_file_upload"
+                android:title="Kirim Data Saja" />
+            <item
+                android:id="@+id/nav_backup"
+                android:icon="@drawable/ic_save"
+                android:title="Backup" />
+            <!--<item-->
+            <!--android:id="@+id/nav_restore"-->
+            <!--android:icon="@drawable/ic_restore"-->
+            <!--android:title="Restore" />-->
+            <!--<item-->
+            <!--android:id="@+id/nav_restore_from_rehab_folder"-->
+            <!--android:icon="@drawable/ic_restore"-->
+            <!--android:title="Restore dari Folder App" />-->
+            <item
+                android:id="@+id/nav_hidden"
+                android:icon="@drawable/ic_hide"
+                android:title="Sekolah Disembunyikan" />
+            <item
+                android:id="@+id/nav_bug"
+                android:icon="@drawable/ic_file_upload"
+                android:title="Kirim Diagnosa Bug" />
+        </menu>
+    </item>
+    <item android:title="Info">
+        <menu>
+            <item
+                android:id="@+id/nav_help"
+                android:icon="@drawable/ic_help"
+                android:title="Bantuan" />
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_info"
+                android:title="Tentang" />
+            <!--<item-->
+            <!--android:id="@+id/nav_notify"-->
+            <!--android:icon="@drawable/ic_notifications_none_black_24dp"-->
+            <!--android:title="Notif" />-->
+        </menu>
+    </item>
+
+</menu>
