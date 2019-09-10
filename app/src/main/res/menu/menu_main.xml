@@ -3,8 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.latihanandroid.MainActivity">
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/action_profil"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="@string/action_profil"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_foto"
+        android:orderInCategory="100"
+        android:title="@string/action_photo"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_view_photo"
+        android:orderInCategory="100"
+        android:title="@string/action_view_photo"
         app:showAsAction="never" />
 </menu>

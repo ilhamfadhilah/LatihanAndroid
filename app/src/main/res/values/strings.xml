@@ -91,4 +91,9 @@
     <string name="http_call_failed">Panggilan HTTP ke server gagal.</string>
     <string name="rehab_notification_body">Nggak kenapa-kenapa sih cuma ngasih tahu aja, ini teh notifikasi..</string>
     <string name="please_wait">Mohon tunggu..</string>
+
+
+    <string name="call">Call</string>
+    <string name="chat">Chat</string>
+    <string name="contact">Contact</string>
 </resources>
