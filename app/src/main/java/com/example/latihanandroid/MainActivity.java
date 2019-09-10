@@ -40,8 +40,23 @@ public class MainActivity extends AppCompatActivity {
         // setting toolbar
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        /*
+        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
+        ViewPager viewPager = findViewById(R.id.viewPager);
+        viewPager.setAdapter(sectionsPagerAdapter);
+        TabLayout tabs = findViewById(R.id.tabLayout);
+        tabs.setupWithViewPager(viewPager);
+ */
+         //setting viewpager
+        viewPager = findViewById(R.id.viewPager);
+        setupViewPager(viewPager);
+        //setting tablayout
+        tabLayout = findViewById(R.id.tabLayout);
+        if (tabLayout != null) {
+            tabLayout.setupWithViewPager(viewPager);
+        }
 
-
+        //setting drawer
         drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -92,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        initViews();
+
             /*FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,17 +121,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void initViews() {
-        // setting toolbar
-        // setting view pager
-       viewPager = findViewById(R.id.viewPager);
-        setupViewPager(viewPager);
-
-        // setting tabLayout
-        tabLayout = findViewById(R.id.tabLayout);
-        tabLayout.setupWithViewPager(viewPager);
-    }
-
     private void setupViewPager(ViewPager viewPager) {
         MainFragmentPagerAdapter mainFragmentPagerAdapter = new MainFragmentPagerAdapter(getSupportFragmentManager());
         mainFragmentPagerAdapter.addFragment(new SekolahFragment(), getString(R.string.text_sekolah));
@@ -124,7 +128,10 @@ public class MainActivity extends AppCompatActivity {
         mainFragmentPagerAdapter.addFragment(new LahanFragment(), getString(R.string.text_lahanKosong));
         mainFragmentPagerAdapter.addFragment(new RuanganFragment(), getString(R.string.text_ruangan));
         mainFragmentPagerAdapter.addFragment(new TingkatFragment(), getString(R.string.text_lantai));
+
+
         viewPager.setAdapter(mainFragmentPagerAdapter);
 
     }
+
 }

@@ -93,7 +93,7 @@
     <string name="please_wait">Mohon tunggu..</string>
 
 
-    <string name="call">Call</string>
-    <string name="chat">Chat</string>
-    <string name="contact">Contact</string>
+
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
 </resources>
