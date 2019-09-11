@@ -1,14 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:fitsSystemWindows="true"
-    android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:text="@string/text_sekolah"
-        android:layout_centerInParent="true"
-        />
-</RelativeLayout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_home_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        android:paddingTop="16dp"
+        android:scrollbars="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button_tambahdata"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="tambah data sekolah"/>
+
+            <Button
+                android:id="@+id/button_lihatdata"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="lihat sekolah"/>
+
+            <Button
+                android:id="@+id/button_hapusdata"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="hapus data sekolah"/>
+        </LinearLayout>
+    </RelativeLayout>
+

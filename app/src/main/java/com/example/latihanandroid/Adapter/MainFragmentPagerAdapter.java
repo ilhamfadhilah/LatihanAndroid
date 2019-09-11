@@ -1,4 +1,4 @@
-package com.example.latihanandroid;
+package com.example.latihanandroid.Adapter;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;

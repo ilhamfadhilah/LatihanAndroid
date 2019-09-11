@@ -1,15 +1,15 @@
-package com.example.latihanandroid;
+package com.example.latihanandroid.activity;
 
 import android.os.Bundle;
 
+import com.example.latihanandroid.Adapter.MainFragmentPagerAdapter;
+import com.example.latihanandroid.R;
 import com.example.latihanandroid.fragment.GedungFragment;
 import com.example.latihanandroid.fragment.LahanFragment;
 import com.example.latihanandroid.fragment.RuanganFragment;
 import com.example.latihanandroid.fragment.SekolahFragment;
 import com.example.latihanandroid.fragment.TingkatFragment;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
 
 import androidx.annotation.NonNull;
@@ -19,8 +19,6 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager.widget.ViewPager;
 
-import android.view.View;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
