@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.example.latihanandroid.R;
 import com.example.latihanandroid.activity.Recycler2;
+import com.example.latihanandroid.activity.cobarecyclelagi;
 import com.example.latihanandroid.activity.melihatsekolah;
 import com.example.latihanandroid.activity.tambahitemsekolah;
 import com.example.latihanandroid.helper.DBHandler;
@@ -28,6 +29,7 @@ public class SekolahFragment extends Fragment{
     private Button button_datasekolah;
     private Button button_melihatsekolah;
     private Button button_Recyle2;
+    private Button button_Recyle3;
     private DBHandler dbHandler;
 
 
@@ -53,6 +55,7 @@ public class SekolahFragment extends Fragment{
         button_datasekolah = view.findViewById(R.id.button_tambahdatasekolah);
         button_melihatsekolah = view.findViewById(R.id.button_melihat);
         button_Recyle2 = view.findViewById(R.id.button_RecyclerView2);
+        button_Recyle3 = view.findViewById(R.id.button_RecyclerView3);
         button_hapusdata =  view.findViewById(R.id.button_hapusdata);
 
 
@@ -79,6 +82,13 @@ public class SekolahFragment extends Fragment{
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getActivity(), Recycler2.class));
+
+            }
+        });
+        button_Recyle3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), cobarecyclelagi.class));
 
             }
         });
