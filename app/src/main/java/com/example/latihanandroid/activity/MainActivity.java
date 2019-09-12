@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void initComponents(View view){
+   /* public void initComponents(View view){
         button_tambahdata =  findViewById(R.id.button_tambahdata);
         button_lihatdata =  findViewById(R.id.button_lihatdata);
         button_hapusdata =  findViewById(R.id.button_hapusdata);
@@ -169,5 +169,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    */
 
 }

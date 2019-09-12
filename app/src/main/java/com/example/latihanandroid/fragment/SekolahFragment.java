@@ -38,19 +38,43 @@ public class SekolahFragment extends Fragment{
 
         dbHandler = new DBHandler(getActivity());
 
-        FragmentManager fm = getFragmentManager()
+        FragmentManager fm = getFragmentManager();
 
 //if you added fragment via layout xml
-        SekolahFragment fragment = (SekolahFragment) fm.findFragmentById(R.id.activity_sekolah_fragment);
-        fragment.initComponents();
+        initComponents(view);
 
         return view;
 
 
     }
 
+    private void initComponents(View view) {
+        button_tambahdata =  view.findViewById(R.id.button_tambahdata);
+        button_lihatdata =  view.findViewById(R.id.button_lihatdata);
+        button_hapusdata =  view.findViewById(R.id.button_hapusdata);
 
+        button_tambahdata.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), tambahSekolah.class));
+            }
+        });
 
+        button_lihatdata.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), lihatSekolah.class));
+            }
+        });
+
+        button_hapusdata.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dbHandler.hapusSemuaDataSekolah();
+                Toast.makeText(getActivity(), "Berhasil Menghapus Semua Data Sekolah", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
 
 
     // fungsi onClick component
