@@ -5,7 +5,7 @@ public class sekolah {
     private String nama_sekolah;
     private String alamat_sekolah;
 
-    public sekolah() {
+    public sekolah(String form_nama, String form_alamat) {
     }
 
     public sekolah(int id_sekolah, String nama_sekolah, String alamat_sekolah) {
@@ -14,9 +14,9 @@ public class sekolah {
         this.alamat_sekolah = alamat_sekolah;
     }
 
-    public sekolah(String string, String string1) {
+    //public sekolah(String string, String string1) {
+    //}
 
-    }
 
     public int getId_sekolah() {
         return id_sekolah;

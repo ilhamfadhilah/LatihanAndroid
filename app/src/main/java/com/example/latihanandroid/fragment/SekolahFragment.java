@@ -6,28 +6,28 @@ import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.latihanandroid.R;
-import com.example.latihanandroid.activity.MainActivity;
-import com.example.latihanandroid.activity.lihatSekolah;
-import com.example.latihanandroid.activity.tambahSekolah;
+import com.example.latihanandroid.activity.Recycler2;
+import com.example.latihanandroid.activity.melihatsekolah;
+import com.example.latihanandroid.activity.tambahitemsekolah;
 import com.example.latihanandroid.helper.DBHandler;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class SekolahFragment extends Fragment{
-    private Button button_tambahdata;
-    private Button button_lihatdata;
+
     private Button button_hapusdata;
+    private Button button_datasekolah;
+    private Button button_melihatsekolah;
+    private Button button_Recyle2;
     private DBHandler dbHandler;
 
 
@@ -38,7 +38,7 @@ public class SekolahFragment extends Fragment{
 
         dbHandler = new DBHandler(getActivity());
 
-        FragmentManager fm = getFragmentManager();
+       // FragmentManager fm = getFragmentManager();
 
 //if you added fragment via layout xml
         initComponents(view);
@@ -49,21 +49,37 @@ public class SekolahFragment extends Fragment{
     }
 
     private void initComponents(View view) {
-        button_tambahdata =  view.findViewById(R.id.button_tambahdata);
-        button_lihatdata =  view.findViewById(R.id.button_lihatdata);
+
+        button_datasekolah = view.findViewById(R.id.button_tambahdatasekolah);
+        button_melihatsekolah = view.findViewById(R.id.button_melihat);
+        button_Recyle2 = view.findViewById(R.id.button_RecyclerView2);
         button_hapusdata =  view.findViewById(R.id.button_hapusdata);
 
-        button_tambahdata.setOnClickListener(new View.OnClickListener() {
+
+
+
+        button_datasekolah.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(), tambahSekolah.class));
+                startActivity(new Intent(getActivity(), tambahitemsekolah.class));
+
             }
         });
 
-        button_lihatdata.setOnClickListener(new View.OnClickListener() {
+
+        button_melihatsekolah.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(), lihatSekolah.class));
+                startActivity(new Intent(getActivity(), melihatsekolah.class));
+
+            }
+        });
+
+        button_Recyle2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), Recycler2.class));
+
             }
         });
 
@@ -77,33 +93,4 @@ public class SekolahFragment extends Fragment{
     }
 
 
-    // fungsi onClick component
- /*
-    public void initComponents(View view){
-        button_tambahdata =  view.findViewById(R.id.button_tambahdata);
-        button_lihatdata =  view.findViewById(R.id.button_lihatdata);
-        button_hapusdata =  view.findViewById(R.id.button_hapusdata);
-
-        button_tambahdata.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getActivity(), tambahSekolah.class));
-            }
-        });
-
-        button_lihatdata.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getActivity(), lihatSekolah.class));
-            }
-        });
-
-        button_hapusdata.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dbHandler.hapusSemuaDataSekolah();
-                Toast.makeText(getActivity(), "Berhasil Menghapus Semua Data Sekolah", Toast.LENGTH_SHORT).show();
-            }
-        });
-    } */
 }

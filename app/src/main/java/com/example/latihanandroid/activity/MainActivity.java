@@ -19,6 +19,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
 import android.view.MenuItem;
@@ -35,10 +36,6 @@ public class MainActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private TabLayout tabLayout;
 
-    private Button button_tambahdata;
-    private Button button_lihatdata;
-    private Button button_hapusdata;
-    private DBHandler dbHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,13 +44,7 @@ public class MainActivity extends AppCompatActivity {
         // setting toolbar
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        /*
-        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
-        ViewPager viewPager = findViewById(R.id.viewPager);
-        viewPager.setAdapter(sectionsPagerAdapter);
-        TabLayout tabs = findViewById(R.id.tabLayout);
-        tabs.setupWithViewPager(viewPager);
- */
+
          //setting viewpager
         viewPager = findViewById(R.id.viewPager);
         setupViewPager(viewPager);
@@ -115,17 +106,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-            /*FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });*/
-
-
-
     }
 
     private void setupViewPager(ViewPager viewPager) {
@@ -140,36 +120,5 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(mainFragmentPagerAdapter);
 
     }
-
-
-   /* public void initComponents(View view){
-        button_tambahdata =  findViewById(R.id.button_tambahdata);
-        button_lihatdata =  findViewById(R.id.button_lihatdata);
-        button_hapusdata =  findViewById(R.id.button_hapusdata);
-
-        button_tambahdata.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, tambahSekolah.class));
-            }
-        });
-
-        button_lihatdata.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, lihatSekolah.class));
-            }
-        });
-
-        button_hapusdata.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dbHandler.hapusSemuaDataSekolah();
-                Toast.makeText(MainActivity.this, "Berhasil Menghapus Semua Data Sekolah", Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
-
-    */
 
 }

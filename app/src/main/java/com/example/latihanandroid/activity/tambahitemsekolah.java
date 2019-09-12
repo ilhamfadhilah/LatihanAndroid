@@ -1,12 +1,12 @@
 package com.example.latihanandroid.activity;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.latihanandroid.Adapter.sekolahAdapter;
 import com.example.latihanandroid.R;
@@ -15,7 +15,7 @@ import com.example.latihanandroid.model.sekolah;
 
 import java.util.List;
 
-public class tambahSekolah extends AppCompatActivity {
+public class tambahitemsekolah extends AppCompatActivity {
 
     private EditText et_nama;
     private EditText et_alamat;
@@ -27,13 +27,15 @@ public class tambahSekolah extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tambah_sekolah);
+        setContentView(R.layout.activity_tambahitemsekolah);
+        dbHandler = new DBHandler(this);
+        initComponents();
     }
 
     private void initComponents() {
         et_nama = findViewById(R.id.et_nama);
         et_alamat = findViewById(R.id.et_alamatsekolah);
-        button_tambahdata = (Button) findViewById(R.id.button_tambahdata);
+        button_tambahdata = findViewById(R.id.button_tambahdata);
 
         button_tambahdata.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,7 +62,7 @@ public class tambahSekolah extends AppCompatActivity {
             adapter = new sekolahAdapter(sekolahList);
             adapter.notifyDataSetChanged();
 
-            Toast.makeText(tambahSekolah.this, "Berhasil Menambahkan Data", Toast.LENGTH_SHORT).show();
+            Toast.makeText(tambahitemsekolah.this, "Berhasil Menambahkan Data", Toast.LENGTH_SHORT).show();
         }
     }
 }

@@ -11,4 +11,5 @@
         android:text="@string/text_ruangan"
         android:layout_centerInParent="true"
         />
+
 </RelativeLayout>

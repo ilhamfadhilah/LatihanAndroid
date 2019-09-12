@@ -20,16 +20,24 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/button_tambahdata"
+                android:id="@+id/button_tambahdatasekolah"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="tambah data sekolah"/>
 
             <Button
-                android:id="@+id/button_lihatdata"
+                android:id="@+id/button_melihat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="lihat sekolah"/>
+                android:text="Melihat sekolah"/>
+
+            <Button
+                android:id="@+id/button_RecyclerView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recyle2"/>
+
+
 
             <Button
                 android:id="@+id/button_hapusdata"

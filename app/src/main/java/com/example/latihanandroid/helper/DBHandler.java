@@ -84,6 +84,14 @@ public class DBHandler extends SQLiteOpenHelper {
             }
             return sekolahList;
         }
+    // FUNGSI MENGHITUNG ADA BEBERAPA DATA
+    public int getSekolahCount(){
+        String countQuery = "SELECT * FROM " + TABLE_SEKOLAH;
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(countQuery, null);
+        cursor.close();
+        return cursor.getCount();
+    }
 
     // FUNGSI UPDATE DATA SEKOLAH
     public int updateDataSekolah(sekolah sekolaH) {
