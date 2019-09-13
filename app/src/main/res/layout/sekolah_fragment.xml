@@ -41,7 +41,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Recyle3"/>
-
+            <Button
+                android:id="@+id/button_camera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CAMERA"/>
 
 
             <Button

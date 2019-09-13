@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.latihanandroid.R;
+import com.example.latihanandroid.activity.Main2Activity;
 import com.example.latihanandroid.activity.Recycler2;
 import com.example.latihanandroid.activity.cobarecyclelagi;
 import com.example.latihanandroid.activity.melihatsekolah;
@@ -30,6 +31,7 @@ public class SekolahFragment extends Fragment{
     private Button button_melihatsekolah;
     private Button button_Recyle2;
     private Button button_Recyle3;
+    private Button button_camera;
     private DBHandler dbHandler;
 
 
@@ -56,6 +58,7 @@ public class SekolahFragment extends Fragment{
         button_melihatsekolah = view.findViewById(R.id.button_melihat);
         button_Recyle2 = view.findViewById(R.id.button_RecyclerView2);
         button_Recyle3 = view.findViewById(R.id.button_RecyclerView3);
+        button_camera = view.findViewById(R.id.button_camera);
         button_hapusdata =  view.findViewById(R.id.button_hapusdata);
 
 
@@ -85,6 +88,14 @@ public class SekolahFragment extends Fragment{
 
             }
         });
+        button_camera.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), Main2Activity.class));
+
+            }
+        });
+
         button_Recyle3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

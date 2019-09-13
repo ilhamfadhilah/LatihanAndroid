@@ -52,15 +52,16 @@ public class AddEditActivity extends AppCompatActivity {
                 if (id !=0){  // jika id ada maka akan menampilkan update
                     Item.setId(id); //
                     db.update(Item);
-                    Toast.makeText(AddEditActivity.this, "Sudah Terupdate", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AddEditActivity.this, "Sudah Terupdate",Toast.LENGTH_SHORT).show();
                 }else
                 {  // jika idnya kosong maka menambah tabel
                     db.add(Item);
-                    Toast.makeText(AddEditActivity.this, "Data Sudah Di Input", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AddEditActivity.this, "Data Sudah Di Input",Toast.LENGTH_SHORT).show();
                 }
                 finish(); // berfungsi untuk menutup activity sama seperti memanggil onDestroy();
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
+
 }
